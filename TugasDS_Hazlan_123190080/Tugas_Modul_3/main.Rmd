@@ -52,6 +52,9 @@ data("murders")
     ```
     
 2. Sebutkan apa saja nama kolom yang digunakan pada data frame
+```{r}
+  names(murders) # gak ngerti maksud soalnya apa :(
+```
 
 3. Gunakan operator aksesor ($) untuk mengekstrak informasi singkatan negara dan menyimpannya pada objek “a”. Sebutkan jenis class dari objek tersebut. 
 
