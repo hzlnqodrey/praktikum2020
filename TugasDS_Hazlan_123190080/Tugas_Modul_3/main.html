@@ -615,14 +615,18 @@ bernilai sama?</li>
 ## [51] &quot;Apakah variabel &#39;a&#39; dan &#39;b&#39; bernilai sama?  TRUE&quot;</code></pre>
 <p>Jawaban: Ya, bernilai sama</p>
 <ol start="5" style="list-style-type: decimal">
-<li><p>Variabel region memiliki tipe data: factor. Dengan satu baris
-kode, gunakan fungsi level dan length untuk menentukan jumlah region
-yang dimiliki dataset.</p></li>
-<li><p>Fungsi table dapat digunakan untuk ekstraksi data pada tipe
-vektor dan menampilkan frekuensi dari setiap elemen. Dengan menerapkan
-fungsi tersebut, dapat diketahui jumlah state pada tiap region. Gunakan
-fungsi table dalam satu baris kode untuk menampilkan tabel baru yang
-berisi jumlah state pada tiap region.</p></li>
+<li>Variabel region memiliki tipe data: factor. Dengan satu baris kode,
+gunakan fungsi level dan length untuk menentukan jumlah region yang
+dimiliki dataset.</li>
+</ol>
+<pre class="r"><code>  length(levels(murders$region))</code></pre>
+<pre><code>## [1] 4</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Fungsi table dapat digunakan untuk ekstraksi data pada tipe vektor
+dan menampilkan frekuensi dari setiap elemen. Dengan menerapkan fungsi
+tersebut, dapat diketahui jumlah state pada tiap region. Gunakan fungsi
+table dalam satu baris kode untuk menampilkan tabel baru yang berisi
+jumlah state pada tiap region.</li>
 </ol>
 </div>
 
