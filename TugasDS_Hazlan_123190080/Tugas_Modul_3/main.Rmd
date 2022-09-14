@@ -1,0 +1,52 @@
+---
+title: "Tugas Modul 3"
+author: "Hazlan Muhammad Qodri"
+date: "2022-09-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Nama        : Hazlan Muhammad Qodri  
+NIM         : 123190080  
+Kelas       : Praktikum Data Science - C  
+
+Import dataset “murders” menggunakan langkah berikut: 
+```{r murders}
+library(dslabs)
+data("murders")
+```
+
+1. Gunakan fungsi str untuk memeriksa struktur objek “murders”. Manakah dari pernyataan berikut ini yang paling menggambarkan karakter dari tiap variabel pada data frame?
+    ```{r}
+      str(murders)
+    ```
+    + Terdiri dari 51 negara.
+    ```{r}
+      murders$state
+    ```
+    + Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.
+    ```{r}
+      murders[1:50,]
+    ```
+    
+    ```{r}
+      murders[murders$abb == 'DC',]
+    ```
+    Referensi: https://sparkbyexamples.com/r-programming/select-rows-in-r/
+    + Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada tahun 2010. 
+    + str tidak menunjukkan informasi yang relevan. 
+
+2. Sebutkan apa saja nama kolom yang digunakan pada data frame
+
+3. Gunakan operator aksesor ($) untuk mengekstrak informasi singkatan negara dan menyimpannya pada objek “a”. Sebutkan jenis class dari objek tersebut. 
+
+4. Gunakan tanda kurung siku untuk mengekstrak singkatan negara dan menyimpannya pada objek “b”. Tentukan apakah variabel “a” dan “b” bernilai sama?
+
+5. Variabel region memiliki tipe data: factor. Dengan satu baris kode, gunakan fungsi level dan length untuk menentukan jumlah region yang dimiliki dataset.
+
+6. Fungsi table dapat digunakan untuk ekstraksi data pada tipe vektor dan menampilkan frekuensi dari setiap elemen. Dengan menerapkan fungsi tersebut, dapat diketahui jumlah state pada tiap region. Gunakan fungsi table dalam satu baris kode untuk menampilkan tabel baru yang berisi jumlah state pada tiap region. 
+
