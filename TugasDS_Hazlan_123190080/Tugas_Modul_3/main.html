@@ -533,8 +533,13 @@ pembunuhan pada tahun 2010. Kalau Menampilkan Data Murders</li>
 <ul>
 <li>str tidak menunjukkan informasi yang relevan.</li>
 </ul>
-<pre class="r"><code>  str(murders$state)</code></pre>
-<pre><code>##  chr [1:51] &quot;Alabama&quot; &quot;Alaska&quot; &quot;Arizona&quot; &quot;Arkansas&quot; &quot;California&quot; &quot;Colorado&quot; ...</code></pre></li>
+<pre class="r"><code>  str(murders) # gak ngerti maksud soalnya apa :(</code></pre>
+<pre><code>## &#39;data.frame&#39;:    51 obs. of  5 variables:
+##  $ state     : chr  &quot;Alabama&quot; &quot;Alaska&quot; &quot;Arizona&quot; &quot;Arkansas&quot; ...
+##  $ abb       : chr  &quot;AL&quot; &quot;AK&quot; &quot;AZ&quot; &quot;AR&quot; ...
+##  $ region    : Factor w/ 4 levels &quot;Northeast&quot;,&quot;South&quot;,..: 2 4 4 2 4 4 1 2 2 2 ...
+##  $ population: num  4779736 710231 6392017 2915918 37253956 ...
+##  $ total     : num  135 19 232 93 1257 ...</code></pre></li>
 <li><p>Sebutkan apa saja nama kolom yang digunakan pada data
 frame</p></li>
 <li><p>Gunakan operator aksesor ($) untuk mengekstrak informasi
