@@ -63,6 +63,10 @@ data("murders")
 ```
 
 4. Gunakan tanda kurung siku untuk mengekstrak singkatan negara dan menyimpannya pada objek “b”. Tentukan apakah variabel “a” dan “b” bernilai sama?
+```{r}
+  b = murders$abb[]
+  class(b)
+```
 
 5. Variabel region memiliki tipe data: factor. Dengan satu baris kode, gunakan fungsi level dan length untuk menentukan jumlah region yang dimiliki dataset.
 
