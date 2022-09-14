@@ -543,12 +543,17 @@ pembunuhan pada tahun 2010. Kalau Menampilkan Data Murders</li>
 <li><p>Sebutkan apa saja nama kolom yang digunakan pada data
 frame</p></li>
 </ol>
-<pre class="r"><code>  names(murders) # gak ngerti maksud soalnya apa :(</code></pre>
+<pre class="r"><code>  names(murders)</code></pre>
 <pre><code>## [1] &quot;state&quot;      &quot;abb&quot;        &quot;region&quot;     &quot;population&quot; &quot;total&quot;</code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li><p>Gunakan operator aksesor ($) untuk mengekstrak informasi
-singkatan negara dan menyimpannya pada objek “a”. Sebutkan jenis class
-dari objek tersebut.</p></li>
+<li>Gunakan operator aksesor ($) untuk mengekstrak informasi singkatan
+negara dan menyimpannya pada objek “a”. Sebutkan jenis class dari objek
+tersebut.</li>
+</ol>
+<pre class="r"><code>  a = murders$abb
+  class(a)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<ol start="4" style="list-style-type: decimal">
 <li><p>Gunakan tanda kurung siku untuk mengekstrak singkatan negara dan
 menyimpannya pada objek “b”. Tentukan apakah variabel “a” dan “b”
 bernilai sama?</p></li>

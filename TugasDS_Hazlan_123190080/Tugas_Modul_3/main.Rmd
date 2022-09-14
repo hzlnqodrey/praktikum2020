@@ -53,10 +53,14 @@ data("murders")
     
 2. Sebutkan apa saja nama kolom yang digunakan pada data frame
 ```{r}
-  names(murders) # gak ngerti maksud soalnya apa :(
+  names(murders)
 ```
 
-3. Gunakan operator aksesor ($) untuk mengekstrak informasi singkatan negara dan menyimpannya pada objek “a”. Sebutkan jenis class dari objek tersebut. 
+3. Gunakan operator aksesor ($) untuk mengekstrak informasi singkatan negara dan menyimpannya pada objek “a”. Sebutkan jenis class dari objek tersebut.
+```{r}
+  a = murders$abb
+  class(a)
+```
 
 4. Gunakan tanda kurung siku untuk mengekstrak singkatan negara dan menyimpannya pada objek “b”. Tentukan apakah variabel “a” dan “b” bernilai sama?
 
