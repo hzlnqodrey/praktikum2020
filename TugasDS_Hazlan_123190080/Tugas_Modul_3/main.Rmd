@@ -37,8 +37,19 @@ data("murders")
       murders[murders$abb == 'DC',]
     ```
     Referensi: https://sparkbyexamples.com/r-programming/select-rows-in-r/
-    + Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada tahun 2010. 
-    + str tidak menunjukkan informasi yang relevan. 
+    + Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada tahun 2010.
+      Kalau Menampilkan Data Murders
+    ```{r}
+      murders
+    ```
+      Kalau Menampilkan Jumlah Total Pembunuhan pada Tahun 2010
+    ```{r}
+      sum(murders$total)
+    ```
+    + str tidak menunjukkan informasi yang relevan.
+    ```{r}
+      str(murders$state)
+    ``` 
 
 2. Sebutkan apa saja nama kolom yang digunakan pada data frame
 
