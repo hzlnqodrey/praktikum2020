@@ -104,3 +104,9 @@ Pada latihan ini seluruh soal akan akan menggunakan dataset: AS murders
 ```{r}
   which.min(murders$population)
 ```
+
+4. Tampilkan nama negara yang memiliki populasi terkecil. 
+```{r}
+  i_min <- which.min(murders$population)
+  murders$state[i_min]
+```

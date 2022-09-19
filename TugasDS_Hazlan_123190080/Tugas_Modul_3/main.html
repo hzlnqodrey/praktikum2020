@@ -665,6 +665,12 @@ menampilkan hasil yang sama dengan langkah diatas.</li>
 </ol>
 <pre class="r"><code>  which.min(murders$population)</code></pre>
 <pre><code>## [1] 51</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Tampilkan nama negara yang memiliki populasi terkecil.</li>
+</ol>
+<pre class="r"><code>  i_min &lt;- which.min(murders$population)
+  murders$state[i_min]</code></pre>
+<pre><code>## [1] &quot;Wyoming&quot;</code></pre>
 </div>
 
 
