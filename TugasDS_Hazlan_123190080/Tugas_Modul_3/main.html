@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-09-14" />
 
-<title>Tugas Modul 3</title>
+<title>Tugas Modul 3 dan 4</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -363,7 +363,7 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Tugas Modul 3</h1>
+<h1 class="title toc-ignore">Tugas Modul 3 dan 4</h1>
 <h4 class="author">Hazlan Muhammad Qodri</h4>
 <h4 class="date">2022-09-14</h4>
 
@@ -375,6 +375,9 @@ pre code {
 <p>Nama : Hazlan Muhammad Qodri<br />
 NIM : 123190080<br />
 Kelas : Praktikum Data Science - C</p>
+</div>
+<div id="tugas-modul-3" class="section level2">
+<h2>Tugas Modul 3</h2>
 <p>Import dataset “murders” menggunakan langkah berikut:</p>
 <pre class="r"><code>library(dslabs)
 data(&quot;murders&quot;)</code></pre>
@@ -632,6 +635,23 @@ jumlah state pada tiap region.</li>
 <pre><code>## 
 ##     Northeast         South North Central          West 
 ##             9            17            12            13</code></pre>
+</div>
+<div id="tugas-modul-4" class="section level2">
+<h2>Tugas Modul 4</h2>
+<p>Pada latihan ini seluruh soal akan akan menggunakan dataset: AS
+murders</p>
+<pre class="r"><code>  library(dslabs)
+  data(&quot;murders&quot;)</code></pre>
+<ol style="list-style-type: decimal">
+<li>Gunakan operator aksesor ($) untuk mengakses variabel populasi dan
+menyimpannya pada objek baru “pop”. Kemudian gunakan fungsi sort untuk
+mengurutkan variabel “pop”. Pada langkah terakhir, gunakan operator ([)
+untuk menampilkan nilai populasi terkecil.</li>
+</ol>
+<pre class="r"><code>  pop &lt;- murders$population
+  sorted_pop &lt;- sort(pop)
+  sorted_pop[1]</code></pre>
+<pre><code>## [1] 563626</code></pre>
 </div>
 
 

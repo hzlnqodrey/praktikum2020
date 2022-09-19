@@ -1,5 +1,5 @@
 ---
-title: "Tugas Modul 3"
+title: "Tugas Modul 3 dan 4"
 author: "Hazlan Muhammad Qodri"
 date: "2022-09-14"
 output: html_document
@@ -14,6 +14,7 @@ Nama        : Hazlan Muhammad Qodri
 NIM         : 123190080  
 Kelas       : Praktikum Data Science - C  
 
+## Tugas Modul 3
 Import dataset “murders” menggunakan langkah berikut: 
 ```{r murders}
 library(dslabs)
@@ -78,4 +79,17 @@ data("murders")
 6. Fungsi table dapat digunakan untuk ekstraksi data pada tipe vektor dan menampilkan frekuensi dari setiap elemen. Dengan menerapkan fungsi tersebut, dapat diketahui jumlah state pada tiap region. Gunakan fungsi table dalam satu baris kode untuk menampilkan tabel baru yang berisi jumlah state pada tiap region. 
 ```{r}
   table(murders$region)
+```
+
+## Tugas Modul 4
+Pada latihan ini seluruh soal akan akan menggunakan dataset: AS murders
+```{r}
+  library(dslabs)
+  data("murders")
+```
+1. Gunakan operator aksesor ($) untuk mengakses variabel populasi dan menyimpannya pada objek baru “pop”. Kemudian gunakan fungsi sort untuk mengurutkan variabel “pop”. Pada langkah terakhir, gunakan operator ([) untuk menampilkan nilai populasi terkecil. 
+```{r}
+  pop <- murders$population
+  sorted_pop <- sort(pop)
+  sorted_pop[1]
 ```
