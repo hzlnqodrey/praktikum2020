@@ -110,3 +110,24 @@ Pada latihan ini seluruh soal akan akan menggunakan dataset: AS murders
   i_min <- which.min(murders$population)
   murders$state[i_min]
 ```
+
+5. Untuk membuat data frame baru, contoh script yang dapat digunakan adalah sebagai berikut:
+```{r}
+  temp <- c(35, 88, 42, 84, 81, 30)
+  city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", "San Juan", "Toronto")
+  city_temps <- data.frame(name = city, temperature = temp) 
+```
+Gunakan fungsi rank untuk menentukan peringkat populasi dari tiap negara bagian, dimulai dari nilai terkecil hingga terbesar. Simpan hasil pemeringkatan di objek baru “ranks”, lalu buat data frame baru yang berisi nama negara bagian dan peringkatnya dengan nama “my_df”. 
+```{r}
+  ranks <- rank(murders$population)
+  my_df <- data.frame(state = murders$state, rank = ranks)
+  my_df
+```
+
+6. Ulangi langkah sebelumnya, namun kali ini urutkan my_df dengan fungsi order agar data yang ditampilkan merupakan data yang telah diurutkan dari populasi yang paling tidak padat hingga ke yang terpadat. Petunjuk: buat objek “ind” yang akan menyimpan indeks yang diperlukan dalam mengurutkan data populasi 
+```{r}
+  ranks <- rank(murders$population)
+  ind <- order(ranks)
+  my_df <- data.frame(state = murders$state[ind], rank = ranks[ind])
+  my_df
+```
