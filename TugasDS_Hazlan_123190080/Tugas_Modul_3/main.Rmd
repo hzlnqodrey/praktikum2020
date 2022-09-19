@@ -131,3 +131,19 @@ Gunakan fungsi rank untuk menentukan peringkat populasi dari tiap negara bagian,
   my_df <- data.frame(state = murders$state[ind], rank = ranks[ind])
   my_df
 ```
+7. Untuk keperluan analisis data, akan dibuat plot yang memvisualisasikan total pembunuhan terhadap populasi dan mengidentifikasi hubungan antara keduanya. Script yang digunakan: 
+```{r}
+  population_in_millions <- murders$population/10^6
+  total_gun_murders <- murders$total
+  plot(population_in_millions, total_gun_murders)
+```  
+
+Perlu diingat bahwa beberapa negara bagian memiliki populasi di bawah 5 juta, sehingga
+untuk mempermudah analisis, buat plot dalam skala log. Transformasi nilai variabel
+menggunakan transformasi log10,kemudian tampilkan plot-nya.
+```{r}
+  population_in_millions <- murders$population
+  trfm_log10_pop <- log10(population_in_millions)
+  total_gun_murders <- murders$total
+  plot(trfm_log10_pop, total_gun_murders)
+```  
