@@ -142,8 +142,20 @@ Perlu diingat bahwa beberapa negara bagian memiliki populasi di bawah 5 juta, se
 untuk mempermudah analisis, buat plot dalam skala log. Transformasi nilai variabel
 menggunakan transformasi log10,kemudian tampilkan plot-nya.
 ```{r}
-  population_in_millions <- murders$population
+  population_in_millions <- murders$population/10^6
   trfm_log10_pop <- log10(population_in_millions)
   total_gun_murders <- murders$total
   plot(trfm_log10_pop, total_gun_murders)
-```  
+```   
+
+8. Buat histogram dari populasi negara bagian.
+```{r}
+  populasi_negara_bagian <- with(murders, population/10^6)
+  hist(populasi_negara_bagian, main = "Frekuensi Populasi Negara Bagian")
+```   
+
+9. Hasilkan boxplot dari populasi negara bagian berdasarkan wilayahnya. 
+```{r}
+  populasi_negara_bagian <- with(murders, population/10^6)
+  boxplot(populasi_negara_bagian~region, data = murders)
+```   
