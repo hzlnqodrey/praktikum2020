@@ -93,3 +93,8 @@ Pada latihan ini seluruh soal akan akan menggunakan dataset: AS murders
   sorted_pop <- sort(pop)
   sorted_pop[1]
 ```
+2. Tampilkan indeks dari data yang memiliki nilai populasi terkecil. Petunjuk: gunakan fungsi order. 
+```{r}
+  index <- order(murders$population)
+  index[1]
+```
