@@ -17,3 +17,13 @@ ifelse(a%%2==0, "Angka Genap", "Angka Ganjil")
 ## ANY dan ALL
 ## ANY itu seperti OR
 ## ALL itu seperti AND
+
+## FUngsi dalam R
+
+rata <- function(x) {
+  s = sum(x)
+  n = length(x)
+  s/n
+}
+
+rata(1:10)
