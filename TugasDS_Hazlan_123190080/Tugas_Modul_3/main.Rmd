@@ -3,8 +3,8 @@ title: "Tugas Modul 3 dan 4"
 author: "Hazlan Muhammad Qodri"
 date: "2022-09-14"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -27,12 +27,11 @@ data("murders")
     a. Terdiri dari 51 negara.
     b. Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.
     c. Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada tahun 2010.
-      Kalau Menampilkan Data Murders
-      Kalau Menampilkan Jumlah Total Pembunuhan pada Tahun 2010
     d. str tidak menunjukkan informasi yang relevan.
     ```{r}
       str(murders)
     ```
+      Jadi Jawaban C yang paling menggambarkan karakter dari tiap variabel pada data frame  
     
 2. Sebutkan apa saja nama kolom yang digunakan pada data frame
 ```{r}

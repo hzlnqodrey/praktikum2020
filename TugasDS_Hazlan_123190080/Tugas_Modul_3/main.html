@@ -385,6 +385,14 @@ data(&quot;murders&quot;)</code></pre>
 <li><p>Gunakan fungsi str untuk memeriksa struktur objek “murders”.
 Manakah dari pernyataan berikut ini yang paling menggambarkan karakter
 dari tiap variabel pada data frame?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Terdiri dari 51 negara.</li>
+<li>Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.</li>
+<li>Data berisi Nama negara bagian, singkatan dari nama negara bagian,
+wilayah negara bagian, dan populasi negara bagian serta jumlah total
+pembunuhan pada tahun 2010.</li>
+<li>str tidak menunjukkan informasi yang relevan.</li>
+</ol>
 <pre class="r"><code>  str(murders)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    51 obs. of  5 variables:
 ##  $ state     : chr  &quot;Alabama&quot; &quot;Alaska&quot; &quot;Arizona&quot; &quot;Arkansas&quot; ...
@@ -392,157 +400,8 @@ dari tiap variabel pada data frame?</p>
 ##  $ region    : Factor w/ 4 levels &quot;Northeast&quot;,&quot;South&quot;,..: 2 4 4 2 4 4 1 2 2 2 ...
 ##  $ population: num  4779736 710231 6392017 2915918 37253956 ...
 ##  $ total     : num  135 19 232 93 1257 ...</code></pre>
-<ul>
-<li>Terdiri dari 51 negara.</li>
-</ul>
-<pre class="r"><code>  murders$state</code></pre>
-<pre><code>##  [1] &quot;Alabama&quot;              &quot;Alaska&quot;               &quot;Arizona&quot;             
-##  [4] &quot;Arkansas&quot;             &quot;California&quot;           &quot;Colorado&quot;            
-##  [7] &quot;Connecticut&quot;          &quot;Delaware&quot;             &quot;District of Columbia&quot;
-## [10] &quot;Florida&quot;              &quot;Georgia&quot;              &quot;Hawaii&quot;              
-## [13] &quot;Idaho&quot;                &quot;Illinois&quot;             &quot;Indiana&quot;             
-## [16] &quot;Iowa&quot;                 &quot;Kansas&quot;               &quot;Kentucky&quot;            
-## [19] &quot;Louisiana&quot;            &quot;Maine&quot;                &quot;Maryland&quot;            
-## [22] &quot;Massachusetts&quot;        &quot;Michigan&quot;             &quot;Minnesota&quot;           
-## [25] &quot;Mississippi&quot;          &quot;Missouri&quot;             &quot;Montana&quot;             
-## [28] &quot;Nebraska&quot;             &quot;Nevada&quot;               &quot;New Hampshire&quot;       
-## [31] &quot;New Jersey&quot;           &quot;New Mexico&quot;           &quot;New York&quot;            
-## [34] &quot;North Carolina&quot;       &quot;North Dakota&quot;         &quot;Ohio&quot;                
-## [37] &quot;Oklahoma&quot;             &quot;Oregon&quot;               &quot;Pennsylvania&quot;        
-## [40] &quot;Rhode Island&quot;         &quot;South Carolina&quot;       &quot;South Dakota&quot;        
-## [43] &quot;Tennessee&quot;            &quot;Texas&quot;                &quot;Utah&quot;                
-## [46] &quot;Vermont&quot;              &quot;Virginia&quot;             &quot;Washington&quot;          
-## [49] &quot;West Virginia&quot;        &quot;Wisconsin&quot;            &quot;Wyoming&quot;</code></pre>
-<ul>
-<li>Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.</li>
-</ul>
-<pre class="r"><code>  murders[1:50,]</code></pre>
-<pre><code>##                   state abb        region population total
-## 1               Alabama  AL         South    4779736   135
-## 2                Alaska  AK          West     710231    19
-## 3               Arizona  AZ          West    6392017   232
-## 4              Arkansas  AR         South    2915918    93
-## 5            California  CA          West   37253956  1257
-## 6              Colorado  CO          West    5029196    65
-## 7           Connecticut  CT     Northeast    3574097    97
-## 8              Delaware  DE         South     897934    38
-## 9  District of Columbia  DC         South     601723    99
-## 10              Florida  FL         South   19687653   669
-## 11              Georgia  GA         South    9920000   376
-## 12               Hawaii  HI          West    1360301     7
-## 13                Idaho  ID          West    1567582    12
-## 14             Illinois  IL North Central   12830632   364
-## 15              Indiana  IN North Central    6483802   142
-## 16                 Iowa  IA North Central    3046355    21
-## 17               Kansas  KS North Central    2853118    63
-## 18             Kentucky  KY         South    4339367   116
-## 19            Louisiana  LA         South    4533372   351
-## 20                Maine  ME     Northeast    1328361    11
-## 21             Maryland  MD         South    5773552   293
-## 22        Massachusetts  MA     Northeast    6547629   118
-## 23             Michigan  MI North Central    9883640   413
-## 24            Minnesota  MN North Central    5303925    53
-## 25          Mississippi  MS         South    2967297   120
-## 26             Missouri  MO North Central    5988927   321
-## 27              Montana  MT          West     989415    12
-## 28             Nebraska  NE North Central    1826341    32
-## 29               Nevada  NV          West    2700551    84
-## 30        New Hampshire  NH     Northeast    1316470     5
-## 31           New Jersey  NJ     Northeast    8791894   246
-## 32           New Mexico  NM          West    2059179    67
-## 33             New York  NY     Northeast   19378102   517
-## 34       North Carolina  NC         South    9535483   286
-## 35         North Dakota  ND North Central     672591     4
-## 36                 Ohio  OH North Central   11536504   310
-## 37             Oklahoma  OK         South    3751351   111
-## 38               Oregon  OR          West    3831074    36
-## 39         Pennsylvania  PA     Northeast   12702379   457
-## 40         Rhode Island  RI     Northeast    1052567    16
-## 41       South Carolina  SC         South    4625364   207
-## 42         South Dakota  SD North Central     814180     8
-## 43            Tennessee  TN         South    6346105   219
-## 44                Texas  TX         South   25145561   805
-## 45                 Utah  UT          West    2763885    22
-## 46              Vermont  VT     Northeast     625741     2
-## 47             Virginia  VA         South    8001024   250
-## 48           Washington  WA          West    6724540    93
-## 49        West Virginia  WV         South    1852994    27
-## 50            Wisconsin  WI North Central    5686986    97</code></pre>
-<pre class="r"><code>  murders[murders$abb == &#39;DC&#39;,]</code></pre>
-<pre><code>##                  state abb region population total
-## 9 District of Columbia  DC  South     601723    99</code></pre>
-<p>Referensi: <a href="https://sparkbyexamples.com/r-programming/select-rows-in-r/" class="uri">https://sparkbyexamples.com/r-programming/select-rows-in-r/</a></p>
-<ul>
-<li>Data berisi Nama negara bagian, singkatan dari nama negara bagian,
-wilayah negara bagian, dan populasi negara bagian serta jumlah total
-pembunuhan pada tahun 2010. Kalau Menampilkan Data Murders</li>
-</ul>
-<pre class="r"><code>  murders</code></pre>
-<pre><code>##                   state abb        region population total
-## 1               Alabama  AL         South    4779736   135
-## 2                Alaska  AK          West     710231    19
-## 3               Arizona  AZ          West    6392017   232
-## 4              Arkansas  AR         South    2915918    93
-## 5            California  CA          West   37253956  1257
-## 6              Colorado  CO          West    5029196    65
-## 7           Connecticut  CT     Northeast    3574097    97
-## 8              Delaware  DE         South     897934    38
-## 9  District of Columbia  DC         South     601723    99
-## 10              Florida  FL         South   19687653   669
-## 11              Georgia  GA         South    9920000   376
-## 12               Hawaii  HI          West    1360301     7
-## 13                Idaho  ID          West    1567582    12
-## 14             Illinois  IL North Central   12830632   364
-## 15              Indiana  IN North Central    6483802   142
-## 16                 Iowa  IA North Central    3046355    21
-## 17               Kansas  KS North Central    2853118    63
-## 18             Kentucky  KY         South    4339367   116
-## 19            Louisiana  LA         South    4533372   351
-## 20                Maine  ME     Northeast    1328361    11
-## 21             Maryland  MD         South    5773552   293
-## 22        Massachusetts  MA     Northeast    6547629   118
-## 23             Michigan  MI North Central    9883640   413
-## 24            Minnesota  MN North Central    5303925    53
-## 25          Mississippi  MS         South    2967297   120
-## 26             Missouri  MO North Central    5988927   321
-## 27              Montana  MT          West     989415    12
-## 28             Nebraska  NE North Central    1826341    32
-## 29               Nevada  NV          West    2700551    84
-## 30        New Hampshire  NH     Northeast    1316470     5
-## 31           New Jersey  NJ     Northeast    8791894   246
-## 32           New Mexico  NM          West    2059179    67
-## 33             New York  NY     Northeast   19378102   517
-## 34       North Carolina  NC         South    9535483   286
-## 35         North Dakota  ND North Central     672591     4
-## 36                 Ohio  OH North Central   11536504   310
-## 37             Oklahoma  OK         South    3751351   111
-## 38               Oregon  OR          West    3831074    36
-## 39         Pennsylvania  PA     Northeast   12702379   457
-## 40         Rhode Island  RI     Northeast    1052567    16
-## 41       South Carolina  SC         South    4625364   207
-## 42         South Dakota  SD North Central     814180     8
-## 43            Tennessee  TN         South    6346105   219
-## 44                Texas  TX         South   25145561   805
-## 45                 Utah  UT          West    2763885    22
-## 46              Vermont  VT     Northeast     625741     2
-## 47             Virginia  VA         South    8001024   250
-## 48           Washington  WA          West    6724540    93
-## 49        West Virginia  WV         South    1852994    27
-## 50            Wisconsin  WI North Central    5686986    97
-## 51              Wyoming  WY          West     563626     5</code></pre>
-<p>Kalau Menampilkan Jumlah Total Pembunuhan pada Tahun 2010</p>
-<pre class="r"><code>  sum(murders$total)</code></pre>
-<pre><code>## [1] 9403</code></pre>
-<ul>
-<li>str tidak menunjukkan informasi yang relevan.</li>
-</ul>
-<pre class="r"><code>  str(murders) # gak ngerti maksud soalnya apa :(</code></pre>
-<pre><code>## &#39;data.frame&#39;:    51 obs. of  5 variables:
-##  $ state     : chr  &quot;Alabama&quot; &quot;Alaska&quot; &quot;Arizona&quot; &quot;Arkansas&quot; ...
-##  $ abb       : chr  &quot;AL&quot; &quot;AK&quot; &quot;AZ&quot; &quot;AR&quot; ...
-##  $ region    : Factor w/ 4 levels &quot;Northeast&quot;,&quot;South&quot;,..: 2 4 4 2 4 4 1 2 2 2 ...
-##  $ population: num  4779736 710231 6392017 2915918 37253956 ...
-##  $ total     : num  135 19 232 93 1257 ...</code></pre></li>
+<p>Jadi Jawaban C yang paling menggambarkan karakter dari tiap variabel
+pada data frame</p></li>
 <li><p>Sebutkan apa saja nama kolom yang digunakan pada data
 frame</p></li>
 </ol>
