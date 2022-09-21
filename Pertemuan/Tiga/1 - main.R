@@ -27,3 +27,27 @@ rata <- function(x) {
 }
 
 rata(1:10)
+
+## For Loop
+for(i in 1:10){
+  print(i)
+}
+
+## Case Example For Loop : Murders 2010 US
+
+library(dslabs)
+data(murders)
+
+murder_rate =  murders$total / murders$population * 100000
+murder_rate
+rateintext = c()
+
+for ( i in 1:length(murder_rate)) {
+  if (murder_rate[i] < 3) {
+    rateintext[i] = "Kecil"
+  } else {
+    rateintext[i] = "Besar"
+  }
+}
+
+rateintext
