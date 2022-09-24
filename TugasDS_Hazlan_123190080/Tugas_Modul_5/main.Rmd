@@ -43,3 +43,12 @@ compute_s_n <- function(n) {
 }
 compute_s_n(10)
 ```
+4. Buat vektor numerik kosong dengan nama: s_n dengan ukuran:25 menggunakan s_n <- vector ("numeric", 25). Simpan di hasil komputasi S1, S2,. . . S25 menggunakan FOR-LOOP.
+```{r}
+m = 25
+s_n = vector(length = m)
+for (n in 1:m) {
+  s_n[n] = compute_s_n(n)
+}
+s_n
+```

@@ -1682,6 +1682,19 @@ ketika n = 10.</p>
 }
 compute_s_n(10)</code></pre>
 <pre><code>## [1] 385</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Buat vektor numerik kosong dengan nama: s_n dengan ukuran:25
+menggunakan s_n &lt;- vector (“numeric”, 25). Simpan di hasil komputasi
+S1, S2,. . . S25 menggunakan FOR-LOOP.</li>
+</ol>
+<pre class="r"><code>m = 25
+s_n = vector(length = m)
+for (n in 1:m) {
+  s_n[n] = compute_s_n(n)
+}
+s_n</code></pre>
+<pre><code>##  [1]    1    5   14   30   55   91  140  204  285  385  506  650  819 1015 1240
+## [16] 1496 1785 2109 2470 2870 3311 3795 4324 4900 5525</code></pre>
 </div>
 
 
