@@ -60,3 +60,14 @@ for(n in 1:m){
 
 x <- 1:10
 sapply(x, sqrt)
+
+
+# ------------
+sum_n <- function(n) {
+  x = 1:n
+  sum(x)
+}
+
+sum_n(5000)
+
+

@@ -1669,12 +1669,19 @@ bilangan bulat dari 1 hingga n. Gunakan pula fungsi ini untuk menentukan
 jumlah bilangan bulat dari 1 hingga 5.000.</li>
 </ol>
 <pre class="r"><code>sum_n &lt;- function(n) {
-  x = 1:n
-  sum(x)
+  sum(1:n)
 }
 
 sum_n(5000)</code></pre>
 <pre><code>## [1] 12502500</code></pre>
+<p>3 .Buat fungsi compute_s_n yang dapat digunakan untuk menghitung
+jumlah Sn = 1^2 + 2^2 + 3^2 +. . . n2 . Tampilkan hasil penjumlahan
+ketika n = 10.</p>
+<pre class="r"><code>compute_s_n &lt;- function(n) {
+  sum((1:n)^2)
+}
+compute_s_n(10)</code></pre>
+<pre><code>## [1] 385</code></pre>
 </div>
 
 

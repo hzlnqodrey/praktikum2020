@@ -31,9 +31,15 @@ new_names
 2. Buat fungsi sum_n yang dapat digunakan untuk menghitung jumlah bilangan bulat dari 1 hingga n. Gunakan pula fungsi ini untuk menentukan jumlah bilangan bulat dari 1 hingga 5.000.
 ```{r}
 sum_n <- function(n) {
-  x = 1:n
-  sum(x)
+  sum(1:n)
 }
 
 sum_n(5000)
+```
+3 .Buat fungsi compute_s_n yang dapat digunakan untuk menghitung jumlah Sn = 1^2 + 2^2 + 3^2 +. . . n2 . Tampilkan hasil penjumlahan ketika n = 10.
+```{r}
+compute_s_n <- function(n) {
+  sum((1:n)^2)
+}
+compute_s_n(10)
 ```
