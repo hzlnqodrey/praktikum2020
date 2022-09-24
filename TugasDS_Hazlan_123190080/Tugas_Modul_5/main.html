@@ -1674,9 +1674,11 @@ jumlah bilangan bulat dari 1 hingga 5.000.</li>
 
 sum_n(5000)</code></pre>
 <pre><code>## [1] 12502500</code></pre>
-<p>3 .Buat fungsi compute_s_n yang dapat digunakan untuk menghitung
-jumlah Sn = 1^2 + 2^2 + 3^2 +. . . n2 . Tampilkan hasil penjumlahan
-ketika n = 10.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Buat fungsi compute_s_n yang dapat digunakan untuk menghitung jumlah
+Sn = 1^2 + 2^2 + 3^2 +. . . n2 . Tampilkan hasil penjumlahan ketika n =
+10.</li>
+</ol>
 <pre class="r"><code>compute_s_n &lt;- function(n) {
   sum((1:n)^2)
 }
@@ -1693,6 +1695,13 @@ for (n in 1:m) {
   s_n[n] = compute_s_n(n)
 }
 s_n</code></pre>
+<pre><code>##  [1]    1    5   14   30   55   91  140  204  285  385  506  650  819 1015 1240
+## [16] 1496 1785 2109 2470 2870 3311 3795 4324 4900 5525</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Ulangi langkah pada soal no. 4 dan gunakan fugsi sapply.</li>
+</ol>
+<pre class="r"><code> s_n &lt;- sapply(1:25, compute_s_n)
+ s_n</code></pre>
 <pre><code>##  [1]    1    5   14   30   55   91  140  204  285  385  506  650  819 1015 1240
 ## [16] 1496 1785 2109 2470 2870 3311 3795 4324 4900 5525</code></pre>
 </div>
