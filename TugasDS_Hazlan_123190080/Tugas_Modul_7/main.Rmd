@@ -1,0 +1,40 @@
+---
+title: "Tugas Modul 7"
+author: "Hazlan Muhammad Qodri"
+date: "2022-10-27"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Nama        : Hazlan Muhammad Qodri  
+NIM         : 123190080  
+Kelas       : Praktikum Data Science - C 
+
+## Tugas Modul 7
+
+```{r murders}
+library(dslabs)
+data("murders")
+```  
+
+1. Gunakan as_tibble untuk mengkonversi tabel dataset “US murders” dalam bentuk tibble dan simpan dalam objek baru bernama ‘murders_tibble’.
+
+2. Gunakan fungsi group_by untuk mengkonversi dataset “US murders” menjadi sebuah tibble yang dikelompokkan berdasarkan ‘region’.  
+
+3. Tulis script tidyverse yang menghasilkan output yang sama dengan perintah berikut:  
+```{r}
+  exp(mean(log(murders$population)))
+```   
+Gunakan operator pipe sehingga setiap fungsi dapat dipanggil tanpa menambahkanargumen. Gunakan dot operator untuk mengakses populasi.  
+
+4. Gunakan map_df untuk membuat data frame yang terdiri dari tiga kolom: ‘n’, ‘s_n’, dan ‘s_n_2’. Kolom pertama harus berisi angka 1 hingga 100. Kolom kedua dan ketiga masingmasing harus berisi penjumlahan 1 hingga n, dimana n menyatakan jumlah baris.
+
+
