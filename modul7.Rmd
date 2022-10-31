@@ -20,7 +20,7 @@ Tahap terpenting sebelum kita melakukan impor data adalah menentukan alamat dima
 Dalam modul ini Anda akan menggunakan paket `here` untuk menentukan dan menuliskan alamat berkas atau dokumen. Aktifkanlah paket `here` terlebih dahulu dengan menjalankan `library(nama_paket)`!
 
 ```{r}
-library(___)
+library(here)
 ```
 
 Kemudian periksalah alamat direktori utama berada dengan cara menjalankan fungsi `dr_here()`. Mengapa direktori utama terdeteksi dan berada pada alamat tersebut?
@@ -32,7 +32,7 @@ dr_here()
 Kita juga dapat menggunakan fungsi `here()` untuk mendapatkan alamat direktori utama. Selanjutnya bagaimana cara untuk menuliskan alamat suatu berkas atau dokumen dengan cara menggunakan fungsi `here()`? Dalam contoh berikut kita dapat menentukan alamat dari berkas 'udara_bandung.xlsx' yang tersimpan dalam subdirektori "data-raw".
 
 ```{r}
-___ # dimanakah alamat direktori utama/Project berada?
+here() # dimanakah alamat direktori utama/Project berada?
 here("data-raw", "udara_bandung.xlsx")
 ```
 
